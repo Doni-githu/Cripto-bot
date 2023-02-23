@@ -23,9 +23,12 @@ async def start(message: types.Message):
     from markup import x
     await message.answer("Привет\nЯ крипто bot\nКакие крипто волюты хотите", reply_markup=x)
 
+
 @dp.message_handler(commands='help')
 async def help(message: types.Message):
     await message.answer("Вы крипто боте\nНажмите на кнопки")
+
+
 @dp.message_handler()
 async def cripto(message: types.Message):
     for i in coins:
